@@ -21,7 +21,6 @@ set ttimeoutlen=0        " 设置<ESC>键响应时间
 set virtualedit=block,onemore   " 允许光标出现在最后一个字符的后面
 set hidden               " 设置允许在未保存切换buffer
 set matchpairs+=<:>      " 设置%匹配<>
-set background=dark      " 设置背景默认黑色
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 代码缩进和排版
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -38,10 +37,9 @@ set nowrap               " 禁止折行
 set backspace=2          " 使用回车键正常处理indent,eol,start等
 set sidescroll=10        " 设置向右滚动字符数
 set nofoldenable         " 禁用折叠代码
-set list lcs=tab:¦\      " 设置默认开启对齐线
 set sidescroll=0         " 设置向右滑动距离
 set sidescrolloff=4      " 设置右部距离
-" set scrolloff=5          " 设置底部距离
+"set scrolloff=5          " 设置底部距离
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 代码补全
@@ -82,9 +80,6 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 "增加
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 packadd termdebug     "增加
-set relativenumber
-set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ [%{(&fenc==\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}]\ %c:%l/%L%)
-                         " 设置状态行显示的信息
 set mouse=a
 set backspace=indent,eol,start "允许删除换行符
 set display=lastline    "避免折行后有一行不见
@@ -98,4 +93,65 @@ set tabstop=2
 set noerrorbells
 set novisualbell
 set backspace=indent,eol,start
+set background=dark
+
+
+"渐变色状态栏
+
+set statusline=
+set statusline+=%#User0#           " 应用 User0 颜色
+set statusline+=\ %<%F[%M%n%R%H]   " 文件名、修改标志等
+set statusline+=%#User6#           " 使用 User6 颜色
+set statusline+=\                   " 一个空格
+set statusline+=\                   " 多插入几个空格
+set statusline+=\                   " 可以根据需要调整空格数量
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 再添加更多空格
+set statusline+=\                   " 插入一些空格以扩展区域
+set statusline+=\                   " 插入一些空格以扩展区域
+set statusline+=%#User1#           " 应用 User1 颜色
+set statusline+=%=                 " 左右对齐
+set statusline+=\ %y               " 文件类型
+set statusline+=%#User2#           " 应用 User2 颜色
+set statusline+=\ %{&fileformat}   " 文件格式
+set statusline+=%#User3#           " 应用 User3 颜色
+set statusline+=\ %{&encoding}     " 编码格式
+set statusline+=%#User4#           " 应用 User4 颜色
+set statusline+=\ Ln\ %l           " 行号
+set statusline+=%#User5#           " 应用 User5 颜色
+set statusline+=,\ Col\ %c/%L      " 列号和总行数
+
+
+
+
+
+hi User0 ctermfg=white  ctermbg=98
+hi User1 ctermfg=white  ctermbg=69
+hi User2 ctermfg=white  ctermbg=32
+hi User3 ctermfg=white  ctermbg=31
+hi User4 ctermfg=white  ctermbg=30
+hi User5 ctermfg=white  ctermbg=29
+
+hi User6 ctermfg=white  ctermbg=105
+hi User7 ctermfg=white  ctermbg=147
+hi User8 ctermfg=white  ctermbg=67
+
 
