@@ -1,3 +1,4 @@
+syntax on
 setlocal noswapfile " 不要生成swap文件
 set bufhidden=hide " 当buffer被丢弃的时候隐藏它
 set number " 显示行号
