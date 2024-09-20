@@ -21,7 +21,7 @@ set backspace=indent,eol,start " 不设定在插入状态无法用退格键和 D
 set cmdheight=1 " 设定命令行的行数为 1
 set laststatus=2 " 显示状态栏 (默认值为 1, 无法显示状态栏)
 set nospell "无拼写检查
-set clipboard=unnamed "系统剪贴板
+set clipboard=unnamedplus "系统剪贴板
 "set foldenable " 开始折叠
 "set foldmethod=syntax " 设置语法折叠
 "set foldcolumn=0 " 设置折叠区域的宽度
