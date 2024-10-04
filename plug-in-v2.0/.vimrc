@@ -38,15 +38,19 @@ set hidden
 set t_Co=256             " 开启256色支持
 
 
+
+
 set background=light
 
 call plug#begin()
 
 Plug 'rose-pine/vim'
 Plug 'itchyny/lightline.vim'
-
+Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
 
-colorscheme rosepine_dawn
+
+colorscheme PaperColor
+"colorscheme rosepine_dawn
 let g:lightline = { 'colorscheme': 'rosepine_dawn' }
