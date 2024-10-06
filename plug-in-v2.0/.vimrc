@@ -39,6 +39,11 @@ set t_Co=256             " 开启256色支持
 
 
 
+nnoremap E $
+nnoremap B ^
+
+
+
 
 set background=light
 
